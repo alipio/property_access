@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    property_access (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.22.2)
+    rake (13.1.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  minitest (~> 5.0)
+  property_access!
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.4.20
