@@ -5,5 +5,6 @@ require_relative "property_access/property_path"
 
 class PropertyAccess
   class Error < StandardError; end
-  # Your code goes here...
+
+  InvalidPropertyPath = Class.new(Error)
 end

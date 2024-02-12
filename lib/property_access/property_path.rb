@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class PropertyAccess
-  class PropertyPath
-    InvalidPropertyPath = Class.new(StandardError)
+  module PropertyPath
+    module_function
 
-    def self.parse(path)
+    def parse_property_path(path)
       path ||= ""
       elements = []
 
@@ -54,7 +54,7 @@ class PropertyAccess
               path_elem, path = "*", path[rbracket..]
             else
               index = Integer(segment) rescue nil
-              raise InvalidPropertyPath, "invalid array index: #{segment}" unless index
+              raise InvalidPropertyPath, "invalid array index: `#{segment}'" unless index
 
               path_elem, path = index, path[rbracket..]
             end
